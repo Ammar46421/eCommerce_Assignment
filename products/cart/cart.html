@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="cart.css">
+</head>
+
+<body>
+    <nav id="navbar" class="navbar navbar-dark bg-black">
+        <div class="container-fluid">
+            <h2 id="title" class="text-light">E-Mobile Store</h2>
+            <ul class="navbar-nav">
+                <li class="nav-item" style="display: flex; gap: 15px; font-size: 22px;">
+                    <a class="nav-link text-light" href="./../products.html">Home</a>
+                    <a class="nav-link text-light" href="#">Contacts</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2 class="text-center">Your Shopping Cart</h2>
+        <table class="table table-striped mt-4">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="cartItems"></tbody>
+        </table>
+        <div class="text-center">
+            <h4>Total Amount: $<span id="totalAmount">0</span></h4>
+            <button class="btn btn-success mt-3">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <script src="cart.js"></script>
+</body>
+
+</html>

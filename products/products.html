@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="products.css">
     <title>Products</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="products.css">
 </head>
-
 <body>
     <!-- Navbar -->
     <nav id="navbar" class="navbar navbar-dark bg-black">
         <div class="container-fluid">
             <h2 id="title" class="text-light">E-Mobile Store</h2>
-            <ul class="navbar-nav">
+            <ul class="navbar-nav" >
                 <li class="nav-item" style="display: flex; gap: 15px; font-size: 22px;">
-                    <a class="nav-link text-light" href="./form.html">Add Products</a>
                     <a class="nav-link text-light" href="./../user/user.html">User</a>
+                    <a class="nav-link text-light position-relative" href="./cart/cart.html">
+                        <i class="bi bi-cart-fill" style="font-size: 28px; padding-left: 20px; align-items: center;"></i>
+                        <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            0
+                        </span>
+                    </a>
                 </li>
             </ul>
         </div>
@@ -25,7 +30,6 @@
 
     <!-- Introduction -->
     <div class="container mt-4 d-flex align-items-center justify-content-between flex-wrap">
-        <!-- Left Section: Paragraph -->
         <div class="intro-text">
             <h2 style="text-align: center; font-size: 40px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Welcome to E-Mobile Store</h2>
             <p class="lead" style="font-size: 30px; text-align: center;">
@@ -33,8 +37,6 @@
                 Browse our products and grab the best deals today!
             </p>
         </div>
-    
-        <!-- Right Section: Image Slider -->
         <div id="productCarousel" class="carousel slide slider-container" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -43,9 +45,6 @@
                 <div class="carousel-item">
                     <img src="https://propakistani.pk/wp-content/uploads/2023/10/Vivo.jpg" class="d-block w-100 slider-img" alt="Mobile 2">
                 </div>
-                <!-- <div class="carousel-item">
-                    <img src="image3.jpg" class="d-block w-100 slider-img" alt="Mobile 3">
-                </div> -->
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -55,19 +54,72 @@
             </button>
         </div>
     </div>
+
     
-
-   
-
+    
     <!-- Product List -->
     <div class="container mt-5">
         <h3 style="text-align: center; font-size: 60px; margin-top: 100px; margin-bottom: 80px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-style: oblique;">Product List</h3>
         <div id="productList" class="row"></div>
     </div>
 
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+          <div class="row">
+            <!-- Branding and About -->
+            <div class="col-md-4">
+              <h4><i class="bi bi-bootstrap"></i> E-Mobile Store</h4>
+              <p style="font-size: 25px; color: rgb(131, 131, 131);">Providing the best mobile deals with quality service.</p>
+              <p style="font-size: 25px; color: rgb(131, 131, 131);">© 2025 E-Mobile Store. All rights reserved.</p>
+            </div>
+      
+            <!-- Links Section -->
+            <div class="col-md-2" style="font-family: 'Times New Roman', Times, serif;">
+              <h4>Links</h4>
+              <ul class="list-unstyled" >
+                <li><a href="#" class="text-light" style=" text-decoration: none;">Home</a></li>
+                <li><a href="#" class="text-light" style=" text-decoration: none;">Products</a></li>
+                <li><a href="#" class="text-light" style=" text-decoration: none;">Categories</a></li>
+                <li><a href="#" class="text-light" style=" text-decoration: none;">Blog</a></li>
+                <li><a href="#" class="text-light" style=" text-decoration: none;">Contact</a></li>
+              </ul>
+            </div>
+      
+            <!-- Guides Section -->
+            <div class="col-md-2" style="font-family: 'Times New Roman', Times, serif;">
+              <h4>Guides</h4>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-light" style=" text-decoration: none;">Getting Started</a></li>
+                <li><a href="#" class="text-light" style=" text-decoration: none;">FAQs</a></li>
+                <li><a href="#" class="text-light" style=" text-decoration: none;">Support</a></li>
+              </ul>
+            </div>
+      
+            <!-- Projects Section -->
+            <div class="col-md-2" style="font-family: 'Times New Roman', Times, serif;">
+              <h4>Projects</h4>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-light" style=" text-decoration: none;">Latest Models</a></li>
+                <li><a href="#" class="text-light" style=" text-decoration: none;">Upcoming Sales</a></li>
+                <li><a href="#" class="text-light" style=" text-decoration: none;">Exclusive Offers</a></li>
+              </ul>
+            </div>
+      
+            <!-- Community Section -->
+            <div class="col-md-2" style="font-family: 'Times New Roman', Times, serif;">
+              <h4>Community</h4>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-light" style=" text-decoration: none;">Discussions</a></li>
+                <li><a href="#" class="text-light" style=" text-decoration: none;">Customer Support</a></li>
+                <li><a href="#" class="text-light" style=" text-decoration: none;">Reviews</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+
     <script type="module" src="./../firebase/auth.js"></script>
     <script type="module" src="./../firebase/firestore.js"></script>
     <script type="module" src="./products.js"></script>
-
 </body>
 </html>
