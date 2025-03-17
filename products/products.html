@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <!-- <navbar -->
+    <!-- Navbar -->
     <nav id="navbar" class="navbar navbar-dark bg-black">
         <div class="container-fluid">
             <h2 id="title" class="text-light">E-Mobile Store</h2>
@@ -23,11 +23,39 @@
         </div>
     </nav>
 
-    <!-- admin section -->
+    <!-- Product Form -->
+    <div class="container mt-4">
+        <h3>Add a New Product</h3>
+        <form id="productForm">
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" id="productTitle" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea id="description" class="form-control" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="imageUrl" class="form-label">Image URL</label>
+                <input type="text" id="imageUrl" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="price" class="form-label">Price</label>
+                <input type="number" id="price" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Product</button>
+        </form>
+    </div>
 
+    <!-- Product List -->
+    <div class="container mt-5">
+        <h3>Product List</h3>
+        <div id="productList" class="row"></div>
+    </div>
 
-<script type="module" src="./../firebase/auth.js"></script>
-<script type="module" src="./../firebase/firestore.js"></script>
+    <script type="module" src="./../firebase/auth.js"></script>
+    <script type="module" src="./../firebase/firestore.js"></script>
+    <script type="module" src="./products.js"></script>
 </body>
 
 </html>
