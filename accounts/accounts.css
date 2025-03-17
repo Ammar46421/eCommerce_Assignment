@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Navbar fix */
+#navbar {
+    padding: 15px 20px;
+    width: 100%;
+    
+}
+
+#title {
+    font-size: 40px;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-nav .nav-item li {
+    padding: 0;
+    margin: 0;
+}
+
+/* Centering the form below navbar */
+.container {
+    background: white;
+    padding: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 450px;
+    text-align: center;
+    margin-top: 100px; /* Adjusted so form doesn't overlap navbar */
+}
+
+.form-container {
+    display: none;
+    width: 100%;
+}
+
+.form-container.active {
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Button hover effect */
+button:hover {
+    background: blue;
+}
+
+a {
+    display: block;
+    margin-top: 10px;
+    cursor: pointer;
+    color: blue;
+}
