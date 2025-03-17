@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h2>Product Form</h2>
+        <a href="products.html" class="btn">Back to Products</a>
+    </nav>
+
+    <div class="container">
+        <h2>Add / Edit Product</h2>
+        <form id="productForm" class="form-box">
+            <input type="hidden" id="productId">
+
+            <label>Title:</label>
+            <input type="text" id="productTitle" required>
+
+            <label>Description:</label>
+            <textarea id="description" required></textarea>
+
+            <label>Image URL:</label>
+            <input type="text" id="imageUrl" required>
+
+            <label>Price:</label>
+            <input type="number" id="price" required>
+
+            <button type="submit" class="btn-primary">Save Product</button>
+        </form>
+    </div>
+    <!-- Product List -->
+    <div class="container mt-5">
+        <h3>Product List</h3>
+        <div id="productList" class="row" style="display: flex; flex-wrap: wrap;"></div>
+    </div>
+    <script type="module" src="./products.js"></script>
+    <script type="module" src="js/form.js"></script>
+</body>
+
+</html>

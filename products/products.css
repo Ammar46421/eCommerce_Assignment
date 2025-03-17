@@ -2,17 +2,94 @@ body {
     padding: 0;
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(245, 245, 245);
 }
 
 /* Navbar */
 #navbar {
     padding: 15px 20px;
-    
 }
 
 #title {
     font-size: 40px;
     padding: 0;
     margin: 0;
+}
+
+/* Slider */
+.slider-img {
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Product Cards */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Buttons */
+.btn-edit {
+    background-color: #ffc107;
+    color: black;
+    border: none;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+}
+
+/* Section Container */
+.container.d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Left Section: Intro Text */
+.intro-text {
+    flex: 1;
+    max-width: 45%;
+}
+
+/* Right Section: Slider */
+.slider-container {
+    flex: 1;
+    max-width: 50%;
+}
+
+/* Adjust slider images */
+.slider-img {
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container.d-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro-text, .slider-container {
+        max-width: 100%;
+    }
 }
